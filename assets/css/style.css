@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Calibri, sans-serif;
+}
+
+header {
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  background-image: url(../images/background_index.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  max-width: 100%;
+  color: white;
+
+}
+
+h1 {
+  grid-row-start: 2;
+  text-align: center;
+  color: #ffffff;
+  max-width: 100%;
+  font-size: 80px;
+  align-self: center;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  min-height: 50px;
+  align-items: center;
+  font-size: 20px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+
+}
+
+nav h2{
+  margin-left: 20px;
+
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+  transition: 2s ease;
+}
+
+nav ul li a:hover{
+  color: black;
+}
+
+.main{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  min-height: 75vh;
+  justify-items: center;
+  padding-top: 50px;
+  align-items: center;
+}
+
+.main p {
+  justify-self:start;
+  line-height: 2;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.main h2{
+  font-size: 50px;
+  font-weight: normal;
+}
+
+#projets{
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+#projets p {
+  align-self: start;
+  justify-self: center;
+}
+
+#presentation-projets{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  height: 100%;
+}
+
+.projet{
+  border : 1px solid black;
+  border-radius: 10px;
+  width: 20%;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  background-color: black;
+  color: white;
+}
+
+.meteo{
+  transition: 2s ease;
+  color: transparent;
+  background-image: url(../images/meteo.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: {1,2};
+}
+
+.cinema{
+  transition: 2s ease;
+  color: transparent;
+  background-image: url(../images/cinema.png);
+  background-size: cover;
+  background-position: center;
+
+}
+
+.animes{
+  transition: 3s ease;
+  color: transparent;
+  background-image: url(../images/animes.png);
+  background-size: cover;
+  background-position: top;
+}
+
+.animation{
+  animation-duration: 2s;
+  animation-name: slidein;
+  background-color: black;
+  color: white;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+footer{
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  border-top: 1px black solid;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+footer p {
+  justify-self: center;
+  align-self: center;
+}
+
+footer ul{
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  height: 50px;
+  align-items: center;
+}
+
+footer ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+h1 {
+  font-size: 55px;
+
+}
+
+nav{
+  margin-top: 15px;
+  position: static;
+}
+
+nav h2{
+  font-size: 25px;
+}
+
+nav ul{
+  margin-right: 0;
+}
